@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <script src="js/JVP-Layout-Maker/JVPLM.js"></script>
-  <script>
-    var jvplm = new JVPLM(true);
-  </script>
+  <title>jVPlayer Layout Maker</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="jvp-container"></div>
+  <div class="jvp-lm-box">
+    <div class="jvp-container">
+      
+    </div>
+    <div class="jvp-tabset-box">
+      <div class="jvp-tabs-set" data-for='layers-proerties'>
+        <div class="jvp-tab selected" data-for='layer-prop'>
+          <p>Layer properties</p>
+        </div>
+        <div class="jvp-tab" data-for='layers-list'>
+          <p>Layers list</p>
+        </div>
+      </div>
+      <div id='layers-proerties' class="jvp-tabs-content">
+        <div id='layer-prop' class="jvp-tab-content">
+          <div class="position">
+            <form>
+              <select>
+                <option></option>
+                <option>left</option>
+                <option>top</option>
+                <option>width</option>
+                <option>height</option>
+                <option>right</option>
+                <option>bottom</option>
+                <option>z-index</option>
+              </select>
+              <input type='text' placeholder='Value'>  
+              <a href="javascript:;">-</a>
+            </form>
+          </div>
+          <a href="javascript:;">+</a>
+          <form class='jvp-layer-info-etc'>
+            <input type='text' name='name' placeholder='Name'>
+            <input type='text' name='role' placeholder='Role'>
+            <input type='text' name='classList' placeholder='Class list'>
+          </form>
+        </div>
+        <div id='layers-list' class="jvp-tab-content">
+          <div class="jvp-layer-pick jvp-layer-base selected">
+            <p>Base layer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="js/JVP-Layout-Maker/tabs.js"></script>
+<script src="js/JVP-Layout-Maker/JVPLM.js"></script>
+<script>
+  var jvplm = new JVPLM(true);
+</script>
 </html>
